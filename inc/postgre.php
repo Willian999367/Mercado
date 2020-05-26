@@ -23,6 +23,30 @@ class Sql {
 
 
 
+		public function select($string_query){
+
+		$result = $this->query($string_query);
+
+		$data = array();
+
+	    while ($row = pg_fetch_array($result)) {
+	        
+	    	foreach ($row as $key => $value) {
+	    		$row[$key] = utf8_encode($value);
+	    	}
+
+	        array_push($data, $row);
+
+	    }
+
+	    unset($result);
+
+	    return $data;
+
+	}
+
+
+
 	} 	
 
 ?>

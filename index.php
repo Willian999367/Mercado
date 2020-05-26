@@ -18,6 +18,15 @@ require_once("header.php");
 				<div class="col-md-4">	
 
 			<form method="POST" action="form.php">
+
+			<div class="form-group">
+				<label for="number">Nascimento</label>
+				<input type="number" name="id_produto" id="idade" class="form-control" required>
+			</div>	
+
+
+
+
 			<div class="form-group">
 				<label for="nome">Nome</label>
 				<input type="text" name="nome" id="nome" class="form-control" placeholder="Digite o seu nome" required>

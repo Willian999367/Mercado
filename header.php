@@ -86,9 +86,9 @@
 					
 					<nav id="menu" class="pull-right">
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="videos.html">Videos</a></li>
-							<li><a href="#">Tickets</a></li>
+							<li><a href="index.php">Home</a></li>
+							<li><a href="cadastro_tipo_produto.php">Cadastro Tipo de Produto</a></li>
+							<li><a href="cadastro_produto.php">Cadastro Produtos</a></li>
 							<li><a href="#">News</a></li>
 							<li><a href="#">Schedule</a></li>
 							<li class="search">
