@@ -1,63 +1,179 @@
 <?php 
 require_once("header.php");
 ?> 
-		<section>
+
+<section>
+		
+	<div class="container">
+		<div class="row">
+	<div id="news">
+		
+		<h2>Main Products</h2>
+		<hr>
+		</div>
+
+		<div class="jogador owl-carousel owl-theme" >	
+
 			
-			<div id="banner">
-				
-				<h1>Orlando City<small>Orlando City Soccer Club</small></h1>
+		<div class="item">
+			<div class="item-inner">	
+			<img src="img/tv.jpg" alt="tv" width="190" height="150">	
+			<h3>Compre esse tv a melhor do mercado</h3>
+			<time> 28 novembro 2020</time>
+		</div>	
+		</div>
 
-			</div>
-
-
-			<div class="container">
-				<div class="row">
-			<div class="col-md-4">			
 			
+		<div class="item">
+			<div class="item-inner">	
+			<img src="img/tv.jpg" alt="tv" width="190" height="150">	
+			<h3>Compre esse tv a melhor do mercado</h3>
+			<time> 28 novembro 2020</time>
+		</div>	
+		</div>
+
+
+		<div class="item">
+			<div class="item-inner">	
+			<img src="img/tv.jpg" alt="tv" width="190" height="150">	
+			<h3>Compre esse tv a melhor do mercado</h3>
+			<time> 28 novembro 2020</time>
+		</div>	
+		</div>
+	
+
+		<div class="item">
+			<div class="item-inner">	
+			<img src="img/tv.jpg" alt="tv" width="190" height="150">	
+			<h3>Compre esse tv a melhor do mercado</h3>
+			<time> 28 novembro 2020</time>
+		</div>	
+		</div>
+
+
+		<div class="item">
+			<div class="item-inner">	
+			<img src="img/tv.jpg" alt="tv" width="190" height="150">	
+			<h3>Compre esse tv a melhor do mercado</h3>
+			<time> 28 novembro 2020</time>
+		</div>	
+		</div>
+
+
+
+		<div class="item">
+			<div class="item-inner">	
+			<img src="img/tv.jpg" alt="tv" width="190" height="150">	
+			<h3>Compre esse tv a melhor do mercado</h3>
+			<time> 28 novembro 2020</time>
+		</div>	
+		</div>
+	
+	</div>
+
+		
+	
+	</div>
+	</div>		
+	</div>
+
+	
+	<div id="estatisticas"> 
+		<div class="container"> 
+		<div class="row">	
+			<div class="col-sm-4">
+				<p>2020<small>Number one in sales</small></p>
+			</div>
+			<div class="col-sm-4">
+				<p>2020<small>Number one in sales</small></p>
+			</div>
+			<div class="col-sm-4">
+				<p>2020<small>Number one in sales</small></p>
+				</div>
+		</div>
+
+	</div>
+	</div>	
+
+
+	<div id="call-to-action">
+
+		<div class="container">
+
+		<div class="text-center">
+			<h2>This best selling market in Brazil</h2>
+			<hr>	
+		</div>
+
+		<div class="row">
+			<p> Em linguística, a noção de texto é ampla e ainda aberta a uma definição mais precisa. Grosso modo, pode ser entendido como manifestação linguística das ideias de um autor, que serão interpretadas pelo leitor de acordo com seus conhecimentos linguísticos e culturais. Seu tamanho é variável. </p>
+		</div>
+
+		<div class="row row-max-400" >
+			<div class="col-sm-6">
+				<a href="#" class="btn btn-roxo">Venda</a>
 			</div>	
-				<div class="col-md-4">	
 
-			<form method="POST" action="form.php">
+		<div class="col-sm-6">
+			<a href="#" class="btn btn-amarelo">Cadastro Produto</a>
+		</div>			
+		</div>
+	</div>
+	</div>
 
-			<div class="form-group">
-				<label for="number">Nascimento</label>
-				<input type="number" name="id_produto" id="idade" class="form-control" required>
-			</div>	
+	
+	
+	</section>
 
-
-
-
-			<div class="form-group">
-				<label for="nome">Nome</label>
-				<input type="text" name="nome" id="nome" class="form-control" placeholder="Digite o seu nome" required>
-			</div>
-			<div class="form-group">
-				<label for="email">E-mail</label>
-				<input type="email" name="email" id="email" class="form-control" placeholder="seu@email.com.br" required>
-			</div>
-			<div class="form-group">
-				<label for="idade">Nascimento</label>
-				<input type="number" name="idade" id="idade" class="form-control" required>
-			</div>
-
-			<div>
-				<button type="submit" class="btn btn-primary">Cadastrar</button>
-			</div>	
+		
 
 
-			</div>
-			</div>	
-			</div>
+<?php 
+require_once("footer.php");
+?> 
 
+<script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/owl-carousel/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
 
-		</form>	
+<script>
+	
+	$(document).ready(function(){
+		$("#logotipo").on("mouseover",function(){
+			$("#banner h1").addClass("efeito");
+	}).on("mouseout",function(){
+			$("#banner h1").removeClass("efeito");
+		});
 
-		</section>
+		$("#input-search").on("focus", function(){ 
 
-		<?php 
-		require_once("footer.php");
-		?> 
+			$("li.search").addClass("ativo");
 
+		}).on("blur",function(){
 
-	</body>
-</html>
+			$("li.search").removeClass("ativo");
+
+		});	
+
+		$(".jogador").owlCarousel({
+			loop:true,
+			nav:true,
+			margin: 30,
+			navText: ["Anteior","Próximo"],
+			responsive:{
+				0 : {
+					items: 1 
+				},
+				480:{
+					items: 3
+				},
+				780: {
+					items:4	
+				} 	
+			}
+		});
+
+	});
+
+</script>
+

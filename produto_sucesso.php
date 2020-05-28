@@ -24,17 +24,17 @@ foreach ($data as &$produto) {
 $max = 0;
 
 foreach($list as $value){
-	echo "$value";
 	if($value == ($_POST['id_produto'])){
 		$max+=1;
 	}
 }
 
-echo $value;
-if($max = 0){
+echo $max;
+if($max == 0){
 	$inserir = $sql->query("Insert Into produto Values ($id_produto, $id_tipo_produto,'$nome_produto',$preco);");
+	$retorno = "Produto Cadastrado com Sucesso!";
 }else{
-	 echo "Produto Já cadastrado";
+	$retorno = "Erro! Produto já cadastrado";
 }
 
 ?>
@@ -45,8 +45,7 @@ if($max = 0){
 	<div class="col-md-4">			
 	</div>	
 	<div class="col-md-4">		
-
-	<h1>Cadastrado com Sucesso!</h1>
+	<h1><?=$retorno ?></h1>
 	</div>
 </div>
 

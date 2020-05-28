@@ -8,7 +8,7 @@
 						
 						<div class="col-md-2 text-center hidden-xs">
 							
-							
+							<img class="logotipo" src="img/orlando-logo.png" alt="Logotipo">
 
 						</div>
 						<div class="col-md-10">
@@ -21,11 +21,11 @@
 									<ul class="list-unstyled">
 										<li>
 											<h5>Neque porro quisquam est, quister.</h5>
-											<time>January 01, 2020</time>
+											<time>January 01, 2016</time>
 										</li>
 										<li>
 											<h5>Neque porro quisquam est, quister.</h5>
-											<time>January 01, 2020</time>
+											<time>January 01, 2016</time>
 										</li>
 
 									</ul>
@@ -36,9 +36,9 @@
 									<h4>LINKS</h4>
 
 									<ul class="list-unstyled">
-										<li><a href="#"><i class="fa fa-angle-right"></i>Venda</a></li>
-										<li><a href="#"><i class="fa fa-angle-right"></i>Cadastro</a></li>
-										<li><a href="#"><i class="fa fa-angle-right"></i>Produtos </a></li>
+										<li><a href="#"><i class="fa fa-angle-right"></i>Tickets</a></li>
+										<li><a href="#"><i class="fa fa-angle-right"></i>News</a></li>
+										<li><a href="#"><i class="fa fa-angle-right"></i>Schedule</a></li>
 									</ul>
 
 								</div>
@@ -47,20 +47,20 @@
 									<h4 class="hidden-xs">GET IN TOUCH</h4>
 
 									<address class="hidden-xs">
-										<i class="fa fa-map-marker"></i> <span>Joinville, Centro<br/>Brazil, SC</span>
+										<i class="fa fa-map-marker"></i> <span>618 E. South Street, Suite 510<br/>Orlando, FL 32801</span>
 									</address>
 
-									<p class="hidden-xs"><a href="tel:185DDCC"><i class="fa fa-phone"></i>1.855.ORL.CITY</a></p>
+									<p class="hidden-xs"><a href="tel:1855ORLCITY"><i class="fa fa-phone"></i>1.855.ORL.CITY</a></p>
 									
 									<div class="row-fluid visible-xs">
 										<div class="col-xs-6">
-											
+											<a href="#" class="btn btn-footer "><i class="fa fa-map-marker"></i>Location</a>
 										</div>
 										<div class="col-xs-6">
-				
+											<a href="#" class="btn btn-footer"><i class="fa fa-phone"></i>Call</a>
 										</div>
 									</div>
-								</br>
+
 									<ul class="list-unstyled list-socials">
 										<li>
 											<a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
@@ -94,8 +94,8 @@
 				
 				<div class="container copyright-mobile">
 					
-					<p class="pull-left">Copyright © Mercado 2020..</p>
-					<p class="pull-right text-roxo">This best selling market in Brazil</p>
+					<p class="pull-left">Copyright © Orlando City Soccer 2016. All rights reserved.</p>
+					<p class="pull-right text-roxo">Created by HCODE in Udemy</p>
 
 				</div>
 

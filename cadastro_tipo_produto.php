@@ -3,7 +3,8 @@ require_once("header.php");
 ?> 
 
 		<section>
-		
+			
+
 			<div class="container">
 				<div class="row">
 			<div class="col-md-4">			
@@ -13,15 +14,11 @@ require_once("header.php");
 
 			<form method="POST" action="tipo_produto_sucesso.php">
 
-			<div class="form-group">
-				<label for="number">Id Produto</label>
-				<input type="number" name="id_produto" id="id_produto" class="form-control" required>
-			</div>	
-
-
+	
 			<div class="form-group">
 				<label for="nome">Nome tipo produto</label>
-				<input type="text" name="tipo_produto" id="tipo_produto" class="form-control" placeholder="Digite o seu nome" required>
+				<input type="text" name="tipo_produto" id="tipo_produto" class="form-control" 
+				placeholder="Digite o tipo de tipo_produto" required>
 			</div>
 
 

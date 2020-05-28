@@ -57,7 +57,7 @@ require_once("header.php");
 	    		 array_push($list,$id_tipo_produto);
 	    		} 
 				
-				print_r($list);
+				
 				
 			?> 
 

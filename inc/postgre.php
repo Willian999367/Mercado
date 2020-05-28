@@ -8,7 +8,7 @@ class Sql {
 		public function __construct(){
 			$host = "localhost";
 			$port = "5432";
-			$dbname = "Teste";
+			$dbname = "mercado";
 			$user = "postgres";
 			$password = "root";
 			$pg_options = "--client_encoding=UTF8";					
@@ -17,7 +17,7 @@ class Sql {
 		}
 		
 		public function query($string_query){
-		return pg_query($this->dbconn, $string_query);
+			return pg_query($this->dbconn, $string_query);
 		}	
 
 
@@ -32,6 +32,7 @@ class Sql {
 	    while ($row = pg_fetch_array($result)) {
 	        
 	    	foreach ($row as $key => $value) {
+	    		
 	    		$row[$key] = utf8_encode($value);
 	    	}
 

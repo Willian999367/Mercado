@@ -14,13 +14,11 @@
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/orlando.css">
 
-	<script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
-	<script type="text/javascript" src="lib/owl-carousel/owl.carousel.min.js"></script>
-	<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
-
 	
-</head>
 
+
+</head>
+</head>
 <body>
 
 	<header>
@@ -31,8 +29,8 @@
 				<br>
 				<ul>
 				<li> <a href="#">Home</a></li>	
-				<li> <a href="cadastro_tipo_produto.php"> Cadastrar Tipo Produto </a></li>
-				<li> <a href="cadastro_produto.php"> Cadastar Produto</a></li>
+				<li> <a href="#"> Cadastrar Tipo Produto </a></li>
+				<li> <a href="#"> Cadastar Produto</a></li>
 				<li> <a href="#"> Venda </a></li>
 				<li class="Search">
 
