@@ -2,19 +2,18 @@
 require_once("header.php");
 ?> 
 
+
 <section>
 		
-	<div class="container">
-		<div class="row">
-	<div id="news">
+
+	<div id="news" class="container">
 		
 		<h2>Main Products</h2>
 		<hr>
 		</div>
-
+	</div>
+<div class="row">
 		<div class="jogador owl-carousel owl-theme" >	
-
-			
 		<div class="item">
 			<div class="item-inner">	
 			<img src="img/tv.jpg" alt="tv" width="190" height="150">	
@@ -70,13 +69,11 @@ require_once("header.php");
 		</div>
 	
 	</div>
-
-		
-	
 	</div>
 	</div>		
 	</div>
 
+</br>
 	
 	<div id="estatisticas"> 
 		<div class="container"> 
@@ -100,7 +97,7 @@ require_once("header.php");
 
 		<div class="container">
 
-		<div class="text-center">
+		<div class="row text-center">
 			<h2>This best selling market in Brazil</h2>
 			<hr>	
 		</div>
@@ -125,7 +122,8 @@ require_once("header.php");
 	
 	</section>
 
-		
+		</body>
+</html>
 
 
 <?php 

@@ -3,13 +3,11 @@
   
 session_start();
 
-
-
 if(!isset($_SESSION['itens'])){
   $_SESSION['itens'] = array();
 } 
 
-if(isset($_GET['add']) && $_GET['add'] == 'carrinho')
+if(isset($_GET['add']) && $_GET['add'] == 'carrinho'){
     $idProduto = $_GET['id'];
    
     if(!isset($_SESSION['itens'] [$_GET['id']]))
@@ -18,13 +16,15 @@ if(isset($_GET['add']) && $_GET['add'] == 'carrinho')
       }else{
          $_SESSION['itens'] [$_GET['id']] += 1;
       }
+}
 
 if(count($_SESSION['itens'])==0){
     echo "Carrinho Vazio<br><a href='cart.php'>Adcionar Itens</a>";
 }
 
+
 if(isset($_GET['del'])){
-  unset($_SESSION['itens'] [$_GET['del']]);
+    $_SESSION['itens'] [$_GET['del']] -= 1;
 }
 
 
@@ -40,10 +40,19 @@ $sql = new Sql();
 <section>
   
   <div class="container">
-    <div class="row text-center title-default-roxo" style="margin:40px auto;">
-      <h2>Valores</h2>
+   
+
+   <div id="vendas">
+
+    <div class="container">
+
+    <div class="row text-center">
+      <h2>Compras</h2>
       <hr>  
     </div>
+</br>
+
+
 
     <table id="cart-products" class="table table-bordered">
       <thead>
@@ -65,8 +74,14 @@ $sql = new Sql();
             
             foreach ($_SESSION['itens'] as $Prod => $Quantidade):
 
+            if($Quantidade <= 0){
+              continue;
+            } 
+
+
+
             $data = $sql->query("SELECT produto.nome_produto, preco, tipo_produto.imposto 
-            FROM Produto Inner Join tipo_produto On (produto.Id_tipo_produto  = tipo_produto.Id_tipo_produto)
+            FROM Produto Inner Join tipo_produto On (produto.nome_tipo_produto  = tipo_produto.nome_tipo_produto)
             where nome_produto = '$Prod'");
 
              $Res = pg_fetch_assoc($data);
@@ -85,6 +100,9 @@ $sql = new Sql();
          $valor_total = array_sum($total_dinheiro);
          $valor_total_imposto = array_sum($total_imposto);
 
+         if (empty($nome_produto)) {
+           continue;
+          }
 
          ?>
 
@@ -125,11 +143,19 @@ $sql = new Sql();
           <table class="table">
             <tr>
               <td>Total da Compra</td>
-              <td class="text-right"><?=$valor_total?></td>
+              <?php if(!empty($nome_produto)) { 
+               echo '<td class="text-right">'; echo $valor_total; echo'</td>';
+               }
+
+               ?>
             </tr>
             <tr>
               <td>Total de Impostos:</td>
-              <td class="text-right">R$ <?=$valor_total_imposto?></td>
+              <?php if(!empty($nome_produto)) { 
+               echo '<td class="text-right">'; echo $valor_total_imposto; echo'</td>';
+               }
+               ?>
+
             </tr>
         
           </table>

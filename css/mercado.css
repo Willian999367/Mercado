@@ -118,14 +118,14 @@ header #logotipo{
 	font-family: "Open-Sans"; 
 	font-size: 48px;
 	margin-top: 15%;
-	margin-left: 37%
+	margin-left: -8%
 }
 
 #news hr {
 	border: #FDE192 solid 4px; 
 	width: 200px; 
 	margin-top: 0%;
-	margin-left: 41%
+	margin-left: 38%
 	
 }
 
@@ -174,6 +174,22 @@ header #logotipo{
 	text-align: center;
 }	
 
+#vendas h2 {
+	text-align: center;
+	color: #5E2799;
+	font-family: "Open-Sans"; 
+	font-size: 48px;
+	margin-top: 10%;
+	margin-left: 38%	
+}
+
+#vendas hr {
+	border: #FDE192 solid 4px; 
+	width: 200px; 
+	margin-top: 0%;
+	margin-left: 38%	
+}
+
 #call-to-action h2 {
 	text-align: center;
 	color: #5E2799;
@@ -220,6 +236,14 @@ header #logotipo{
 	margin: 0 auto; 
 	max-width: 400px; 
 } 
+
+#tipo_cadastro{
+	margin-top: 10%;
+}
+
+#sucesso{
+	margin-top: 5%;
+}
 
 footer {
 	margin-top: 110px;
@@ -331,3 +355,5 @@ footer .list-socials i {
 	font-size: 16px;
 	margin: 7px auto;
 }
+
+s

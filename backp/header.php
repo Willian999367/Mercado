@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="lib/owl.carousel/owl-carousel/owl.carousel.css">
 		<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
-		<link rel="stylesheet" href="css/orlando.css">
+		<link rel="stylesheet" href="css/mercado.css">
 		<link rel="stylesheet" href="css/orlando-mobile.css">
 
 
@@ -42,3 +42,6 @@
 			</div>			
 
 		</header>
+
+	</body>
+	</html>

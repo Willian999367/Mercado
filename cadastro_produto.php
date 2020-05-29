@@ -11,16 +11,7 @@ require_once("header.php");
 			</div>	
 				<div class="col-md-4" id="tipo_cadastro">	
 
-			<form method="POST" action="produto_sucesso.php">
-
-
-
-			<div class="form-group">
-				<label for="number">Id Produto</label>
-				<input type="number" name="id_produto" id="id_produto" class="form-control" required>
-			</div>	
-
-			
+			<form method="POST" action="produto_sucesso.php">			
 			
 
 			<div class="form-group">
@@ -48,12 +39,12 @@ require_once("header.php");
 				require_once("inc/postgre.php");
 
 				$sql = new Sql();
-				$result = $sql->query("SELECT id_tipo_produto FROM tipo_produto;");
+				$result = $sql->query("SELECT nome_tipo_produto FROM tipo_produto;");
 				
-				$data = $sql->select("SELECT id_tipo_produto FROM tipo_produto;");
+				$data = $sql->select("SELECT nome_tipo_produto FROM tipo_produto;");
 				$list = array();
 				foreach ($data as &$produto) {
-	    		 $id_tipo_produto = $produto['id_tipo_produto'];
+	    		 $id_tipo_produto = $produto['nome_tipo_produto'];
 	    		 array_push($list,$id_tipo_produto);
 	    		} 
 				
@@ -63,16 +54,13 @@ require_once("header.php");
 
 			<div class="form-group">
 				<label for="id_tipo_produto">Tipo Produto</label>
-				<select name="id_tipo_produto" id="id_tipo_produto" multiple size="3">
+				<select class="custom-select" name="id_tipo_produto" id="id_tipo_produto" multiple size="3" required>
 					<?php foreach($list as $value):?>
 					<?php echo "<option value='$value'> $value </option>";?>
 					<?php endforeach; ?>
 				</select>
 			</div>
-
-
-
-
+		</br>
 			<div>
 				<button type="submit" class="btn btn-primary">Cadastrar</button>
 			</div>	
