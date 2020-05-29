@@ -9,10 +9,10 @@ Para rodar o projeto, é necessário seguir o passo a passo abaixo:
 - Configuração Postgres: 
 
 
-- Abrir o arquivo c:/xampp/php/php.ini e descomente as linhas abaixo:
+Abrir o arquivo c:/xampp/php/php.ini e descomente as linhas abaixo:
 
-extension=pdo_pgsql
-extension=pgsql
+- extension=pdo_pgsql
+- extension=pgsql
 
 - Reinicie o Apache pela ferramenta XAMPP
 
