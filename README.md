@@ -1,24 +1,26 @@
+
 Desafio PHP - Softexpert
 
-Segue os passos abaixo para rodar o projeto: 
+Para rodar o projeto, é necessário seguir o passo a passo abaixo: 
 
 - Instalar o XAMPP 
 - Instalar o Postgres
 
 - Configuração Postgres: 
 
-Abre o arquivo c:/xampp/php/php.ini e descomente as linhas abaixo:
+
+- Abrir o arquivo c:/xampp/php/php.ini e descomente as linhas abaixo:
+
 extension=pdo_pgsql
 extension=pgsql
 
-Reinicie o Apache pela ferramenta XAMPP
-
+- Reinicie o Apache pela ferramenta XAMPP
 
 - Baixar o arquivo do GitHub na pasta htdocs. 
 
-- Start no Apache pelo XAMPP 
+- Startar o Apache pelo XAMPP 
 
-Pronto! 
+- Configuração realizada, agora é necessário criar o banco: 
 
 Abaixo criação do Banco: 
 
@@ -29,7 +31,7 @@ Create Table Produto
  Preco integer not null,
  Descricao varchar(50),
  Imagem varchar(2000),	
- Constraint FK_Nome_tipo_produto Foreign Key (Nome_tipo_produto) References Tipo_produto     (Nome_tipo_produto),
+ Constraint FK_Nome_tipo_produto Foreign Key (Nome_tipo_produto) References Tipo_produto(Nome_tipo_produto),
  Constraint PK_Produto Primary key (Nome_produto)
  
 );
