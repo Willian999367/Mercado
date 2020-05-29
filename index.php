@@ -8,10 +8,12 @@ require_once("header.php");
 
 	<div id="news" class="container">
 		
-		<h2>Main Products</h2>
+		<h2>Lista Produtos</h2>
 		<hr>
 		</div>
 	</div>
+
+</br>	
 <div class="row">
 		<div class="jogador owl-carousel owl-theme" >	
 		<div class="item">
@@ -67,6 +69,23 @@ require_once("header.php");
 			<time> 28 novembro 2020</time>
 		</div>	
 		</div>
+
+		<div class="item">
+			<div class="item-inner">	
+			<img src="img/tv.jpg" alt="tv" width="190" height="150">	
+			<h3>Compre esse tv a melhor do mercado</h3>
+			<time> 28 novembro 2020</time>
+		</div>	
+		</div>
+
+
+		<div class="item">
+			<div class="item-inner">	
+			<img src="img/tv.jpg" alt="tv" width="190" height="150">	
+			<h3>Compre esse tv a melhor do mercado</h3>
+			<time> 28 novembro 2020</time>
+		</div>	
+		</div>
 	
 	</div>
 	</div>
@@ -79,13 +98,13 @@ require_once("header.php");
 		<div class="container"> 
 		<div class="row">	
 			<div class="col-sm-4">
-				<p>2020<small>Number one in sales</small></p>
+				<p>2020<small>Mercado numero do Brasil</small></p>
 			</div>
 			<div class="col-sm-4">
-				<p>2020<small>Number one in sales</small></p>
+				<p>2020<small>Mercado numero um Brasil</small></p>
 			</div>
 			<div class="col-sm-4">
-				<p>2020<small>Number one in sales</small></p>
+				<p>2020<small>Mercado numero um Brasil</small></p>
 				</div>
 		</div>
 
@@ -98,7 +117,7 @@ require_once("header.php");
 		<div class="container">
 
 		<div class="row text-center">
-			<h2>This best selling market in Brazil</h2>
+			<h2>Mercado mais famoso do Brasil </h2>
 			<hr>	
 		</div>
 

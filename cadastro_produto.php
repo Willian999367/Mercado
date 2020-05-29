@@ -25,13 +25,14 @@ require_once("header.php");
 			</div>
 
 			<div class="form-group">
-				<label for="nome">Descriação</label>
-				<input type="text" name="descricao" id="descricao" class="form-control" placeholder="Descriação">
+				<label for="nome">Descrição</label>
+				<input type="text" name="descricao" id="descricao" class="form-control" placeholder="Descriação"
+				required>
 			</div>
 
 			<div class="form-group">
 				<label for="nome">Imagem</label>
-				<input type="text" name="imagem" id="imagem" class="form-control" placeholder="Imagem">
+				<input type="text" name="imagem" id="imagem" class="form-control" placeholder="Cole a URL:" required>
 			</div>
 
 			<?php 

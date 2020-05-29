@@ -13,7 +13,8 @@ $descricao = htmlspecialchars($_POST['descricao']);
 $imagem = htmlspecialchars($_POST['imagem']);
 
 
-$inserir = $sql->query("Insert Into produto Values ('$nome_produto', '$id_tipo_produto',$preco);");
+
+$inserir = $sql->query("Insert Into produto Values ('$nome_produto', '$id_tipo_produto',$preco,'$descricao', '$imagem');");
 if ($inserir) {
   	  require_once("sucesso.php");  
     } else {

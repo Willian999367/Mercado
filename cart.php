@@ -8,7 +8,7 @@ $result = $sql->query("SELECT nome_tipo_produto FROM tipo_produto;");
 
 $dat = $sql->select("SELECT nome_produto,preco FROM produto;");
 
-$data = $sql->select("SELECT produto.nome_produto, preco, tipo_produto.imposto 
+$data = $sql->select("SELECT produto.nome_produto, preco, tipo_produto.imposto, imagem
  FROM Produto Inner Join tipo_produto On (produto.nome_tipo_produto  = tipo_produto.nome_tipo_produto);");
 
 $list = array();
@@ -16,6 +16,7 @@ foreach ($data as &$produto) {
 	$nome_produto = $produto['nome_produto'];
 	$preco = $produto['preco'];
 	$imposto = $produto['imposto'];
+	$imagem = $produto['imagem'];
 	}
 ?> 
 
@@ -48,14 +49,16 @@ foreach ($data as &$produto) {
 
 			<?php foreach ($data as &$produto): $nome_produto = $produto['nome_produto']; $preco = $produto['preco']; 
 					$imposto = $produto['imposto'];
+					$imagem = $produto['imagem'];
 					?>
 
 				<tr>
-					<td class="text-center"><img src="img/produtos/"></td>
+					<td class="text-center"><img src="<?=$imagem?>" style="width:30px;height:30px;"></td>
 					<td><?=$nome_produto?></td>
 
 					<td class="text-center col-xs-2">
-						R$ <?=$preco?>
+						R$ 
+						<?php echo number_format($preco, 2, ',', '.'); ?>
 						<strong class="text-roxo"></strong>
 					</td>
 

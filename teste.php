@@ -61,7 +61,7 @@ $sql = new Sql();
           <th class="text-center">Preço</th>
           <th class="text-center">Quantidade</th>
           <th class="text-center">Valor Total</th>
-          <th class="text-center">Imposto/Item</th>
+          <th class="text-center">Imposto</th>
           <th>&nbsp;</th>
         </tr>
       </thead>
@@ -80,7 +80,7 @@ $sql = new Sql();
 
 
 
-            $data = $sql->query("SELECT produto.nome_produto, preco, tipo_produto.imposto 
+            $data = $sql->query("SELECT produto.nome_produto, preco, tipo_produto.imposto, imagem
             FROM Produto Inner Join tipo_produto On (produto.nome_tipo_produto  = tipo_produto.nome_tipo_produto)
             where nome_produto = '$Prod'");
 
@@ -88,9 +88,10 @@ $sql = new Sql();
              $nome_produto = $Res['nome_produto'];
              $preco = $Res['preco'];
              $imposto = $Res['imposto'];
+             $imagem = $Res['imagem'];
              $total = $preco * $Quantidade;
-             $total1 = $preco * $imposto / 100;
-             $total2 = $preco - $total1; 
+             $total1 = ($preco * $imposto) / 100; 
+             $total2 = $Quantidade * $total1;
              array_push($total_dinheiro,$total);
              array_push($total_imposto,$total2);
         
@@ -108,18 +109,35 @@ $sql = new Sql();
 
       <tbody>
         <tr>
-          <td class="text-center"><img src="img/produtos/"></td>
+          <td class="text-center">
+            <img src="<?=$imagem?>" style="width:30px;height:30px;">
+          </td>
           <td class="text-center"><?=$nome_produto?></td>
           <td class="col-xs-2 text-center">
-            R$ <?=$preco?>
+            R$ 
+            <?php 
+            echo number_format($preco, 2, ',', '.'); 
+            ?>
+
           </td>
           <td class="text-center col-xs-2">
 
             <strong class="text-roxo"><?=$Quantidade?></strong>
           </td>
-          <td class="text-center">R$ <?=$Quantidade * $preco?></td>
-          <?php $valor = $preco * $imposto / 100 ?>
-          <td class="text-center"><?=$preco- $valor?></td>
+          <td class="text-center">R$ 
+            <?php 
+            $numberTotal = $Quantidade * $preco;
+            echo number_format($numberTotal, 2, ',', '.'); 
+            ?>
+          </td>
+          <?php 
+          $valor = $preco * $imposto / 100;?>
+          <td class="text-center">
+            <?php 
+            $number = $Quantidade * $valor;
+            echo number_format($number, 2, ',', '.'); 
+            ?>
+          </td>
           <td class="text-center">
               <a href="teste.php?del=<?=$nome_produto?>">
               X
@@ -144,7 +162,8 @@ $sql = new Sql();
             <tr>
               <td>Total da Compra</td>
               <?php if(!empty($nome_produto)) { 
-               echo '<td class="text-right">'; echo $valor_total; echo'</td>';
+               echo '<td class="text-right">'; echo number_format($valor_total, 2, ',', '.'); 
+               echo'</td>';
                }
 
                ?>
@@ -152,7 +171,8 @@ $sql = new Sql();
             <tr>
               <td>Total de Impostos:</td>
               <?php if(!empty($nome_produto)) { 
-               echo '<td class="text-right">'; echo $valor_total_imposto; echo'</td>';
+               echo '<td class="text-right">'; echo number_format($valor_total_imposto, 2, ',', '.'); 
+               echo'</td>';
                }
                ?>
 
@@ -163,7 +183,11 @@ $sql = new Sql();
       </div>
     </div>
 
-   
+   <div>
+        <a href="cart.php">
+        <button type="submit" class="btn btn-danger">Voltar</button>
+        </a>
+      </div>  
 
   </div>
 
