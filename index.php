@@ -87,8 +87,7 @@ require_once("header.php");
 		</div>	
 		</div>
 	
-	</div>
-	</div>
+	
 	</div>		
 	</div>
 
@@ -106,9 +105,8 @@ require_once("header.php");
 			<div class="col-sm-4">
 				<p>2020<small>Mercado numero um Brasil</small></p>
 				</div>
+			</div>
 		</div>
-
-	</div>
 	</div>	
 
 
@@ -136,12 +134,9 @@ require_once("header.php");
 		</div>
 	</div>
 	</div>
-
-	
-	
 	</section>
 
-		</body>
+</body>
 </html>
 
 

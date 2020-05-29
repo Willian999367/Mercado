@@ -69,7 +69,7 @@ foreach ($data as &$produto) {
 
 					
 					<td class="col-xs-2 text-center">
-					<a href="teste.php?add=carrinho&id=<?=$nome_produto?>">Adcionar</a>
+					<a href="compras.php?add=carrinho&id=<?=$nome_produto?>">Adcionar</a>
 					</td>
 					
 

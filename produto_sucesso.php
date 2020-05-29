@@ -16,9 +16,9 @@ $imagem = htmlspecialchars($_POST['imagem']);
 
 $inserir = $sql->query("Insert Into produto Values ('$nome_produto', '$id_tipo_produto',$preco,'$descricao', '$imagem');");
 if ($inserir) {
-  	  require_once("sucesso.php");  
+  	  require_once("sucesso_produto.php");  
     } else {
-      require_once("erro.php");
+      require_once("erro_produto.php");
     }
 
 ?>

@@ -10,9 +10,9 @@ $imposto = htmlspecialchars($_POST['imposto']);
 
 $inserir = $sql->query("Insert Into tipo_produto Values ('$tipo_produto',$imposto);");
  if ($inserir) {
-  	  require_once("sucesso.php");  
+  	  require_once("sucesso_tipo.php");  
     } else {
-      require_once("erro.php");
+      require_once("erro_tipo.php");
     }
 
 

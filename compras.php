@@ -139,7 +139,7 @@ $sql = new Sql();
             ?>
           </td>
           <td class="text-center">
-              <a href="teste.php?del=<?=$nome_produto?>">
+              <a href="compras.php?del=<?=$nome_produto?>">
               X
             </a>
             </button>
