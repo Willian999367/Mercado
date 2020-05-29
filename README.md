@@ -20,7 +20,7 @@ Abrir o arquivo c:/xampp/php/php.ini e descomente as linhas abaixo:
 
 - Startar o Apache pelo XAMPP 
 
-- Configuração realizada, agora é necessário criar o banco: 
+Configuração realizada, agora é necessário criar o banco: 
 
 Abaixo criação do Banco: 
 
